@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>expensesRecord</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <div class="sidebar-logo">
+                <h1 class="h1-sidebar-logo">expenses</h1>
+                <h1 class="h1-sidebar-logo h1-sidebar-logo-2">Record</h1>
+            </div>
+
+            <form class="sidebad-inputs">
+                
+                <div class="sidebar-element ">   
+                    <label for="input-releaseName" class="label-releaseName  label-input">Release name</label>
+                    <input type="text" class="inputs input-releaseName">
+                </div>
+
+                <div class="sidebar-element">
+                    <label for="input-value" class="label-value  label-input">Value</label>
+                    <input type="number" class="inputs input-value">
+                </div>
+
+                <div class="sidebar-element">
+                    <label for="input-date" class="label-date label-input">Date</label>
+                    <input type="date" class="inputs input-date">
+                </div>
+                
+                <div class="sidebar-element">
+                    <label for="type-select" class="label-select label-input">Type</label>
+                    <select name="type-select" class="type-select">
+                        <option value="Receita" class="type-select">Revenue</option>
+                        <option value="Despesa" class="type-select">Expenses</option>
+                    </select>
+                </div>   
+            
+
+                <div class="sidebar-element sidebar-element-button">
+                    <button class="btn-footer-sidebar">Register</button>
+                </div>
+            </form>  
+        </header>
+
+
+        <main class="main-container">
+            <div class="header-main">
+                <div class="p-itens-header-main">
+                    <p class="p-header-releaseName">Nome do lançamento</p>
+                </div>
+                <div class="p-itens-header-main">
+                    <p class="p-header-date">Data</p>
+                </div>
+                <div class="p-itens-header-main">
+                    <p class="p-header-type">Tipo</p>
+                </div>
+                <div class="p-itens-header-main">
+                    <p class="p-header-value">Valor</p>
+                </div>    
+            </div>
+
+            <div class="releases-main">
+                <ul class="list-releases-main">
+                    <li class="li-container">
+                        
+                        <div class="name-span-li-container">
+                        <button>X</button>
+                        </div>
+
+                        <div class="name-span-li-container">
+                        <p>Lucas Lacerda</p>
+                        </div>
+
+                        <div class="date-span-li-container">
+                        <p>10/03/2021</p>
+                        </div>
+
+                        <div class="type-span-li-container">
+                        <p>Revenue</p>
+                        </div>
+
+                        <div class="value-span-li-container">
+                        <p>R$ 1.000,00</p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-main">
+                <div class="div-p-footer-main-revenue">
+                    <p class="p-footer-main-revenue">Receita - R$ 00,00</p>
+                </div>
+                <div class="div-p-footer-main-revenue">
+                    <p class="p-footer-main-revenue">Despesas - R$ 00,00</p>
+                </div>
+                <div class="div-p-footer-main-revenue">
+                    <p class="p-footer-main-revenue">Total - R$ 00,00</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

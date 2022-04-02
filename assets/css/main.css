@@ -1,0 +1,58 @@
+
+
+/* --------------------------------Cabeçalho--------------------------------*/
+
+.header-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: green;
+    font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------List---------------------------------*/
+
+.releases-main{
+    display: flex;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+
+.li-container{
+    display: flex;
+    justify-content: space-around;
+    width: 150vh;
+    background: pink;
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------Bottton---------------------------------*/
+.footer-main{
+    display: flex;
+    justify-content: space-around;
+    background: red;
+}
