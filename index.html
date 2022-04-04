@@ -20,7 +20,7 @@
 
             <form class="sidebad-inputs">
                 
-                <div class="sidebar-element ">   
+                <div class="sidebar-element">   
                     <label for="input-releaseName" class="label-releaseName  label-input">Release name</label>
                     <input type="text" class="inputs input-releaseName">
                 </div>
@@ -38,13 +38,14 @@
                 <div class="sidebar-element">
                     <label for="type-select" class="label-select label-input">Type</label>
                     <select name="type-select" class="type-select">
-                        <option value="Receita" class="type-select">Revenue</option>
-                        <option value="Despesa" class="type-select">Expenses</option>
+                        <option for="type-select" value="" class="type-select" default></option>
+                        <option for="type-select" value="Revenue" class="type-select">Revenue</option>
+                        <option for="type-select" value="Expense" class="type-select">Expense</option>
                     </select>
                 </div>   
             
-
-                <div class="sidebar-element sidebar-element-button">
+                
+                <div class="sidebar-element-button sidebar-element">
                     <button class="btn-footer-sidebar">Register</button>
                 </div>
             </form>  
@@ -134,5 +135,8 @@
             </div>
         </main>
     </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/liElements.js"></script>
 </body>
 </html>

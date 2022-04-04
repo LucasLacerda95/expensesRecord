@@ -42,6 +42,8 @@
     padding-right: 12px;
     margin-top: 10px;
     width: 100%;
+    
+    
 }
 
 .li-container{
@@ -112,7 +114,7 @@
     justify-content: space-between;
     /* background: red; */
     border-top: 1px solid;
-    
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 .div-p-footer-main{
