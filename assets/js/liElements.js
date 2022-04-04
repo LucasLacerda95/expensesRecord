@@ -80,5 +80,33 @@ function createExpense(releaseName, inputValue, inputDate, typeSelect){
     date.appendChild(pDate);
     type.appendChild(pType);
     value.appendChild(pValue);
-
+    
+    saveTasks(releaseName, inputValue, inputDate, typeSelect);
 }
+
+
+
+
+const listaDeTarefas = [];
+
+function saveTasks(releaseName, inputValue, inputDate, typeSelect){
+    
+    const itens = [releaseName,inputValue,inputDate,typeSelect]
+
+       listaDeTarefas.push(itens);
+
+       
+       const tarefasJSON = JSON.stringify(listaDeTarefas);
+       localStorage.setItem(`tasks${contList}`, tarefasJSON);
+    
+};
+
+
+
+function cleanInput(){
+    releaseName.value = '';
+    inputDate.value = '';
+    inputValue.value = '';
+    typeSelect.value = '';
+    releaseName.focus();
+};

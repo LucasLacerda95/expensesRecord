@@ -22,22 +22,22 @@
                 
                 <div class="sidebar-element">   
                     <label for="input-releaseName" class="label-releaseName  label-input">Release name</label>
-                    <input type="text" class="inputs input-releaseName">
+                    <input type="text" class="inputs input-releaseName" required>
                 </div>
 
                 <div class="sidebar-element">
                     <label for="input-value" class="label-value  label-input">Value</label>
-                    <input type="number" class="inputs input-value">
+                    <input type="number" class="inputs input-value" required>
                 </div>
 
                 <div class="sidebar-element">
                     <label for="input-date" class="label-date label-input">Date</label>
-                    <input type="date" class="inputs input-date">
+                    <input type="date" class="input-date inputs" required>
                 </div>
                 
                 <div class="sidebar-element">
                     <label for="type-select" class="label-select label-input">Type</label>
-                    <select name="type-select" class="type-select">
+                    <select name="type-select" class="type-select" required>
                         <option for="type-select" value="" class="type-select" default></option>
                         <option for="type-select" value="Revenue" class="type-select">Revenue</option>
                         <option for="type-select" value="Expense" class="type-select">Expense</option>
@@ -70,7 +70,7 @@
 
             <div class="releases-main">
                 <ul class="list-releases-main">
-                    <li class="li-container">
+                    <!-- <li class="li-container">
                         
                         <div class="btn-span-li-container li-container-item">
                         <a href="#"><img src="assets/icons/icons8-lixo.svg" class="img-trash"></a>
@@ -92,51 +92,29 @@
                         <p>R$ 1.000,00</p>
                         </div>
 
-                    </li>
+                    </li> -->
 
-                    <li class="li-container">
-                        
-                        <div class="btn-span-li-container li-container-item">
-                        <a href="#"><img src="assets/icons/icons8-lixo.svg" class="img-trash"></a>
-                        </div>
-
-                        <div class="name-span-li-container li-container-item">
-                        <p>Joaquim</p>
-                        </div>
-
-                        <div class="date-span-li-container li-container-item">
-                        <p>10/03/2021</p>
-                        </div>
-
-                        <div class="type-span-li-container li-container-item">
-                        <p>dfaasdfa</p>
-                        </div>
-
-                        <div class="value-span-li-container li-container-item">
-                        <p>R$ 500,00</p>
-                        </div>
-
-                    </li>
                 </ul>
             </div>
 
             <div class="footer-main">
                 <div class="div-p-footer-main div-p-footer-main-revenue">
                     <img class="ico-footer" src="assets/icons/row-up.png" alt="">
-                    <p class="p-footer-main-revenue">Receita - R$ 00,00</p>
+                    <p class="p-footer-main-revenues">Receita - </p>
                 </div>
                 <div class="div-p-footer-main div-p-footer-main-expenses">
                     <img  class="ico-footer" src="assets/icons/row-down.png" alt="">
-                    <p class="p-footer-main-revenue">Despesas - R$ 00,00</p>
+                    <p class="p-footer-main-expenses">Despesas - </p>
                 </div>
                 <div class="div-p-footer-main div-p-footer-main-total">
-                    <p class="p-footer-main-revenue">Total R$ 00,00</p>
+                    <p class="p-footer-main-total">Total </p>
                 </div>
             </div>
         </main>
     </div>
-
-    <script src="assets/js/main.js"></script>
+    
     <script src="assets/js/liElements.js"></script>
+    <script src="assets/js/checkBalance.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
