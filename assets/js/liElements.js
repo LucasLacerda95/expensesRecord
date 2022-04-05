@@ -53,7 +53,7 @@ function createExpense(releaseName, inputValue, inputDate, typeSelect){
     const pDate = createP();
     const pType = createP();
     const pValue = createP();
-    const contentButton = '<a href="#"><img src="assets/icons/icons8-lixo.svg" class="img-trash"></a>';
+    const contentButton = '<img src="assets/icons/icons8-lixo.svg" class="img-trash">';
 
     pName.innerText = releaseName;
     pDate.innerText = inputDate;
@@ -97,8 +97,7 @@ function saveTasks(releaseName, inputValue, inputDate, typeSelect){
 
        
        const tarefasJSON = JSON.stringify(listaDeTarefas);
-       localStorage.setItem(`tasks${contList}`, tarefasJSON);
-    
+       localStorage.setItem(`tasks`, tarefasJSON);  
 };
 
 
@@ -110,3 +109,6 @@ function cleanInput(){
     typeSelect.value = '';
     releaseName.focus();
 };
+
+/*-------------------------DeleteReleases*/
+
