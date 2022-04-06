@@ -6,6 +6,8 @@ const typeSelect = document.querySelector('.type-select');
 const listReleasesMain = document.querySelector('.list-releases-main');
 const liContainer = document.querySelector('.li-container');
 const formSidebar = document.querySelector('.sidebad-inputs');
+let listaDeTarefas = [];
+
 
 
 //Desativa o envio do formulário.
@@ -24,8 +26,9 @@ function getStorage(){
 };
 
 
-
+getStorage();//Recria os List's com base no storage.
 //Captura o evento de click do botão, faz uma verificação simples e chama a funçao.
+
 btnFooterSidebar.addEventListener('click', function(){
     if(!releaseName.value) return;
     if(!inputValue.value) return;
@@ -42,63 +45,35 @@ btnFooterSidebar.addEventListener('click', function(){
     
     //createBalance(inputValue.value, typeSelect.value);
     createExpense(releaseName.value, parseInputValue, parseInputDate, typeSelect.value);
-  
+    window.location.reload();
     cleanInput();
-    
 });
 
+getItemTask();
 
-
-
-function excluiLi(){
-    document.addEventListener('click', function(e){
-        const el = e.target;
-
-        if(el.classList.contains('img-trash')){
-        const a = el.parentElement;
+function excluiLi(item){     
+        const a = item.parentElement;
         a.parentElement.remove();
-        }
-    });
 }
 
 function getItemTask(){
     let nodeList = document.querySelectorAll('.img-trash');
-    //console.log(nodeList);
+    
     nodeList.forEach((item,index,array) => {
         item.addEventListener('click',function(e){
-            excluiItemStorage(index);
-            
+            window.location.reload();
+            deleteTasksStorage(index);
+            window.location.reload();
+            excluiLi(item);
         })
     });
 };
 
-function excluiItemStorage(index){
-    if(index === null) return;
-    if(index === undefined) return;
-    console.log(index)
-    const tasks = localStorage.getItem('tasks');
-    const list = JSON.parse(tasks);
-    delete list[index];
-    
-    const newList = list.filter(function(i){
-        return i;//Retira espaço vazio
-    });
-
-    console.log(newList);
-    
-    const tarefasJSON = JSON.stringify(newList);
-    localStorage.setItem(`tasks`, tarefasJSON);
-}
-
-
 //Renderiza os elementos na tela a partir do que foi verificado com o getStorage.
 function createLiStorage(list){
+    
     for(const task of list){ 
+        if(list===null || task ===null) return;
         createExpense(task[0], task[1],task[2],task[3]);
     }
 };
-
-getStorage();//Recria os List's com base no storage.
-getItemTask();//Varre os elementos e retorna o seus indices.
-excluiItemStorage();//Vai no Storage e exclui o elemento respectivo.
-excluiLi();//Exclui o List quando clico no elemento img-trash.

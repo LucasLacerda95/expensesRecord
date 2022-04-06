@@ -84,31 +84,42 @@ function createExpense(releaseName, inputValue, inputDate, typeSelect){
     saveTasks(releaseName, inputValue, inputDate, typeSelect);
 }
 
+function deleteTasksStorage(index){
 
+    delete listaDeTarefas[index];
+    console.log(listaDeTarefas);
+    const newListTarefas = listaDeTarefas.filter(function(i){
+        return i;//Retira espaço vazio do array
+    });
 
+    listaDeTarefas = newListTarefas;
+    console.log(listaDeTarefas);
 
-const listaDeTarefas = [];
+    sendItensStorage(listaDeTarefas);
+    
+}
 
 function saveTasks(releaseName, inputValue, inputDate, typeSelect){
-    
-    const itens = [releaseName,inputValue,inputDate,typeSelect]
+    const itens = [releaseName,inputValue,inputDate,typeSelect];
 
        listaDeTarefas.push(itens);
-
        
-       const tarefasJSON = JSON.stringify(listaDeTarefas);
-       localStorage.setItem(`tasks`, tarefasJSON);  
+       sendItensStorage(listaDeTarefas);
 };
 
-
-
+//limpa o imput após o clique..
 function cleanInput(){
     releaseName.value = '';
     inputDate.value = '';
     inputValue.value = '';
     typeSelect.value = '';
-    releaseName.focus();
 };
 
-/*-------------------------DeleteReleases*/
+//Converte array em JSON e envia para o Storage..
+function sendItensStorage(list){
+    if(list === undefined) return;
+    const tarefasJSON = JSON.stringify(list);
+    localStorage.setItem(`tasks`, tarefasJSON);
+}
+
 
