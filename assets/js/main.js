@@ -7,6 +7,7 @@ const listReleasesMain = document.querySelector('.list-releases-main');
 const liContainer = document.querySelector('.li-container');
 const formSidebar = document.querySelector('.sidebad-inputs');
 let listaDeTarefas = [];
+let balanceTasks = listaDeTarefas;
 
 
 
@@ -42,7 +43,8 @@ btnFooterSidebar.addEventListener('click', function(){
     
     //Recebe o valor em forma de string, converte para float e coloca no modo currency.
     const parseInputValue = parseFloat(inputValue.value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    
+   
+ 
     //createBalance(inputValue.value, typeSelect.value);
     createExpense(releaseName.value, parseInputValue, parseInputDate, typeSelect.value);
     window.location.reload();
@@ -50,6 +52,7 @@ btnFooterSidebar.addEventListener('click', function(){
 });
 
 getItemTask();
+
 
 function excluiLi(item){     
         const a = item.parentElement;
@@ -69,6 +72,7 @@ function getItemTask(){
     });
 };
 
+
 //Renderiza os elementos na tela a partir do que foi verificado com o getStorage.
 function createLiStorage(list){
     
@@ -77,3 +81,5 @@ function createLiStorage(list){
         createExpense(task[0], task[1],task[2],task[3]);
     }
 };
+
+calcValues()

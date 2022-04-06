@@ -46,13 +46,18 @@ function createP(){
     return p;
 }
 
+function createPValue(){
+    const p = document.createElement('p');
+    p.classList.add('pValue');
+    return p;
+}
 
 function createExpense(releaseName, inputValue, inputDate, typeSelect){
     const li = createLi();
     const pName = createP();
     const pDate = createP();
     const pType = createP();
-    const pValue = createP();
+    const pValue = createPValue();
     const contentButton = '<img src="assets/icons/icons8-lixo.svg" class="img-trash">';
 
     pName.innerText = releaseName;
@@ -87,16 +92,14 @@ function createExpense(releaseName, inputValue, inputDate, typeSelect){
 function deleteTasksStorage(index){
 
     delete listaDeTarefas[index];
-    console.log(listaDeTarefas);
+
     const newListTarefas = listaDeTarefas.filter(function(i){
         return i;//Retira espaço vazio do array
     });
 
     listaDeTarefas = newListTarefas;
-    console.log(listaDeTarefas);
 
-    sendItensStorage(listaDeTarefas);
-    
+    sendItensStorage(listaDeTarefas);    
 }
 
 function saveTasks(releaseName, inputValue, inputDate, typeSelect){
