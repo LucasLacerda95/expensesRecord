@@ -82,4 +82,5 @@ function createLiStorage(list){
     }
 };
 
-calcValues()
+typeVerification();
+totalizer();
