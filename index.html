@@ -21,32 +21,32 @@
             <form class="sidebad-inputs">
                 
                 <div class="sidebar-element">   
-                    <label for="input-releaseName" class="label-releaseName  label-input">Release name</label>
+                    <label for="input-releaseName" class="label-releaseName  label-input">Nome do Lançamento</label>
                     <input type="text" class="inputs input-releaseName" required>
                 </div>
 
                 <div class="sidebar-element">
-                    <label for="input-value" class="label-value  label-input">Value</label>
-                    <input type="number" class="inputs input-value" required>
+                    <label for="input-value" class="label-value  label-input">Valor</label>
+                    <input type="number" class="inputs input-value" min="1"required>
                 </div>
 
                 <div class="sidebar-element">
-                    <label for="input-date" class="label-date label-input">Date</label>
-                    <input type="date" class="input-date inputs" required>
+                    <label for="input-date" class="label-date label-input">Data</label>
+                    <input type="date" class="input-date inputs" min="2022-01-01" max="2022-12-31" value="2022-01-01"required>
                 </div>
                 
                 <div class="sidebar-element">
-                    <label for="type-select" class="label-select label-input">Type</label>
+                    <label for="type-select" class="label-select label-input">Tipo</label>
                     <select name="type-select" class="type-select" required>
                         <option for="type-select" value="" class="type-select" default></option>
-                        <option for="type-select" value="Revenue" class="type-select">Revenue</option>
-                        <option for="type-select" value="Expense" class="type-select">Expense</option>
+                        <option for="type-select" value="Crédito" class="type-select">Crédito</option>
+                        <option for="type-select" value="Débito" class="type-select">Débito</option>
                     </select>
                 </div>   
             
                 
                 <div class="sidebar-element-button sidebar-element">
-                    <button class="btn-footer-sidebar">Register</button>
+                    <button class="btn-footer-sidebar">Registrar</button>
                 </div>
             </form>  
         </header>
@@ -70,42 +70,21 @@
 
             <div class="releases-main">
                 <ul class="list-releases-main">
-                    <!-- <li class="li-container">
-                        
-                        <div class="btn-span-li-container li-container-item">
-                        <img src="assets/icons/icons8-lixo.svg" class="img-trash">
-                        </div>
-
-                        <div class="name-span-li-container li-container-item">
-                        <p>Lucas Lacerda</p>
-                        </div>
-
-                        <div class="date-span-li-container li-container-item">
-                        <p>10/03/2021</p>
-                        </div>
-
-                        <div class="type-span-li-container li-container-item">
-                        <p>Revenue</p>
-                        </div>
-
-                        <div class="value-span-li-container li-container-item">
-                        <p>R$ 1.000,00</p>
-                        </div>
-
-                    </li> -->
+                   
                 </ul>
             </div>
 
             <div class="footer-main">
                 <div class="div-p-footer-main div-p-footer-main-revenue">
-                    <img class="ico-footer" src="assets/icons/row-up.png" alt="">
+                    <img class="ico-footer" src="assets/icons/icone-mais.png" alt="">
                     <p class="p-footer-main-revenues">R$ 0,00</p>
                 </div>
                 <div class="div-p-footer-main div-p-footer-main-expenses">
-                    <img  class="ico-footer" src="assets/icons/row-down.png" alt="">
+                    <img  class="ico-footer" src="assets/icons/botao-de-menos.png" alt="">
                     <p class="p-footer-main-expenses">R$ 0,00</p>
                 </div>
                 <div class="div-p-footer-main div-p-footer-main-total">
+                    <img  class="ico-footer" src="assets/icons/sigma.png" alt="">
                     <p class="p-footer-main-total">R$ 0,00</p>
                 </div>
             </div>

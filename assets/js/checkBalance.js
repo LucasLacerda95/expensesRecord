@@ -11,10 +11,10 @@ function typeVerification(){
     const bruteTypes = balanceTasks;
     const newBruteTypesRevenue = [];
     const newBruteTypesExpenses = [];
+    const backgroundType = document.querySelector('.pType');
     
-
     for(let i = 0; i < bruteTypes.length ; i++){    
-        if(bruteTypes[i][3] === 'Revenue'){
+        if(bruteTypes[i][3] === 'Crédito'){
             newBruteTypesRevenue.push(bruteTypes[i][1])
         }else{
             newBruteTypesExpenses.push(bruteTypes[i][1])
@@ -85,10 +85,6 @@ function totalizer(){
     //somaBalance = parseStringToFloat(newBalance);
     const parseTotalBalance = convertFloatToCurrency(soldTotal);
     
-    
-    console.log(parseTotalBalance)
-    
-   
     totalBalance.innerText = `${parseTotalBalance}`;
 };
 

@@ -52,13 +52,19 @@ function createPValue(){
     return p;
 }
 
+function createPType(){
+    const p = document.createElement('p');
+    p.classList.add('pType');
+    return p;
+}
+
 function createExpense(releaseName, inputValue, inputDate, typeSelect){
     const li = createLi();
     const pName = createP();
     const pDate = createP();
-    const pType = createP();
+    const pType = createPType();
     const pValue = createPValue();
-    const contentButton = '<img src="assets/icons/icons8-lixo.svg" class="img-trash">';
+    const contentButton = '<img src="assets/icons/delete-div.png" class="img-trash">';
 
     pName.innerText = releaseName;
     pDate.innerText = inputDate;

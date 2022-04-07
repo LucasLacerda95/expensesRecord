@@ -82,5 +82,20 @@ function createLiStorage(list){
     }
 };
 
+
+function setCurrentDate(){
+    var date = new Date();
+    
+    var dia = String(date.getDate()).padStart(2, '0');
+    var mes = String(date.getMonth() + 1).padStart(2, '0');
+    var ano = String(date.getFullYear());
+
+    var dateHTML = document.querySelector('.input-date')
+    dateHTML.setAttribute('value', `${ano}-${mes}-${dia}`)
+}
+
+
+
+setCurrentDate()
 typeVerification();
 totalizer();

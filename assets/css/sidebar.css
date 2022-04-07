@@ -12,11 +12,14 @@
     font-weight: 400;
     font-size: 2.1vw;
     line-height: 40px;
-    color: var(--primary-color);
+    color: #0e0e0e;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: rgb(255, 0, 0);
 }
 
 .h1-sidebar-logo-2{
-    color: black;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 
 /* -------------------------------INPUTS-------------------------------*/
@@ -44,13 +47,16 @@
 
 .inputs{
     display: block;
+    color: #FFFFFF;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgb(151, 151, 151);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    opacity: 50%;
     width: 75%;
     margin: 0 auto;
     height: 20px;
-    font-size: 12px;
+    font-size: 14px;
+    
 }
 
 .inputs:focus{
@@ -58,7 +64,11 @@
     box-shadow: 0 0 0 0;
     outline: 0;
     margin: 0 auto;
-    border-bottom: 1px solid rgb(151, 151, 151);
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+
+.inputs:hover{
+    border-bottom: 1px solid rgb(255, 0, 0);
 }
 
 .label-input{
@@ -69,35 +79,49 @@
     display: block;
     margin:  auto;
     width: 77%;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.29);
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
     cursor: pointer;
     font-size: 12px;
+    mix-blend-mode: normal;
+    color: #FFFFFF;
+    opacity: 70%;
+    background-color: #181818;
+}
+
+.type-select:focus{
+    border: 1px solid #fc0404;
+}
+
+.type-select:hover{
+    border: 1px solid #fc0404;
 }
 
 .btn-footer-sidebar{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background: var(--primary-color);
-    border-radius: 10px;
+    background: #181818;
+    border-radius: 5px;
     width: 11vw;
     height: 40px;
-    color: #FFFFFF;
+    color: #ffffff80;
     font-size: 3vh;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: none;
+    border: 1px solid #F20000;
 }
 
 .btn-footer-sidebar:hover{
-    background: #9e1922;
+    background: #461115;
     cursor: pointer;
+    color: #fffefe;
 }
 
 label{
-    opacity: 50%;
+    opacity: 75%;
 }
 
 

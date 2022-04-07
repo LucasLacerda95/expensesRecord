@@ -8,6 +8,9 @@
     align-items: flex-end;
     font-size: 11px;
     opacity: 50%;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.288);
+    border-radius: 8px;
 }
 
 .p-itens-header-main{
@@ -16,24 +19,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------------------------------List---------------------------------*/
 
 .releases-main{
     display: flex;
     height: 100%;
-
+    overflow-y: scroll;
 }
 
 .list-releases-main{
@@ -53,8 +44,9 @@
     width: 100%;
     list-style: none;
     /*------------*/
-    background: #FFFFFF;
-    border: 1px solid #000000;
+    
+    background: transparent;
+    border-bottom: 1px solid #b12020;
     border-radius: 10px;
     margin-bottom: 8px;
     font-size: 10px;
@@ -70,6 +62,14 @@
 
 .type-span-li-container{
     margin-right: 6.5vw;
+    
+}
+
+.type-span-li-container p{
+    padding: 0.3vw;
+    opacity: 60%;
+    border-radius: 10px;
+    
 }
 
 .date-span-li-container{
@@ -96,20 +96,16 @@
     padding: 2px;
     border-radius: 5px;
     cursor: pointer;
+    opacity: 0%;
 }
 
 
-
-
-
-.img-trash:hover{
-    background-color: rgb(255, 126, 126);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 1px 1px 1px rgba(0, 0, 0, 0.25);
+.li-container:hover .img-trash{
+    opacity: 100%;
+    background-color: transparent;
+    border-color: 3px solid #ff0000;
+    box-shadow: 2px 2px 2px rgba(255, 0.5, 0.5, 0.5), 2px 2px 2px rgba(252, 0.5, 0.5, 0.5);
 }
-
-
-
-
 
 
 /* --------------------------------Bottton---------------------------------*/
@@ -117,8 +113,10 @@
     display: flex;
     justify-content: space-between;
     /* background: red; */
-    border-top: 1px solid;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.288);
+    border-radius: 8px;
+    
 }
 
 .div-p-footer-main{
@@ -139,11 +137,34 @@
 .p-footer-main-revenue{
     margin-left: 1vw;
 }
+.p-footer-main-total{
+    background-color: rgba(243, 56, 56, 0.63);
+    padding: 0.2vw;
+    border-radius: 5px;
+}
 
 .ico-footer{
     margin-left: 1vw;
+    margin-right: 1vw;
     width: 30px;
     height: 30px;
-    background-color: rgb(20, 252, 20);
+    border-radius: 2px;
+    padding: -100px;
 }
 
+/*Barra de Rolagem*/
+
+::-webkit-scrollbar-track {
+    background-color: #353535;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #c7c7c7;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #424242;
+    border-radius: 15px;
+    border: 1px solid #FF0000;
+}
